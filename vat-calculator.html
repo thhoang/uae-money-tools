@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UAE VAT Calculator - Add or Remove 5% VAT</title>
+<meta name="description" content="Free UAE VAT calculator. Add 5% VAT to a net price or remove VAT from a gross amount. See net, VAT and total instantly. Based on the official 5% UAE VAT rate.">
+<link rel="canonical" href="https://uae-money-tools.pages.dev/vat-calculator">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UAE VAT Calculator - Add or Remove 5% VAT">
+<meta property="og:description" content="Add or strip 5% UAE VAT from any amount. Free, instant, private.">
+<meta property="og:url" content="https://uae-money-tools.pages.dev/vat-calculator">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"UAE VAT Calculator",
+ "url":"https://uae-money-tools.pages.dev/vat-calculator","applicationCategory":"FinanceApplication",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+ "description":"Add or remove 5% UAE VAT from any amount."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the VAT rate in the UAE?","acceptedAnswer":{"@type":"Answer","text":"The standard VAT rate in the UAE is 5%, in force since 1 January 2018. A small number of goods and services are zero-rated or exempt."}},
+{"@type":"Question","name":"How do I remove VAT from a price that includes VAT?","acceptedAnswer":{"@type":"Answer","text":"Divide the VAT-inclusive price by 1.05 to get the net amount. The VAT part is the inclusive price minus the net amount, which equals 4.7619% of the inclusive price."}},
+{"@type":"Question","name":"When must a business register for VAT in the UAE?","acceptedAnswer":{"@type":"Answer","text":"Registration is mandatory when taxable supplies and imports exceed AED 375,000 per year, and voluntary above AED 187,500."}},
+{"@type":"Question","name":"Do tourists pay VAT in the UAE?","acceptedAnswer":{"@type":"Answer","text":"Yes, tourists pay 5% VAT at the point of sale, but they can claim a refund on eligible purchases when leaving the country through the official tax refund scheme."}}
+]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="/"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff" opacity=".18"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">DH</text></svg>UAE Money Tools</a>
+  <nav class="main" aria-label="Main"><ul>
+    <li><a href="/gratuity-calculator">Gratuity</a></li>
+    <li><a href="/vat-calculator" aria-current="page">VAT</a></li>
+    <li><a href="/salary-calculator">Salary</a></li>
+    <li><a href="/guides/uae-vat-guide">Guides</a></li>
+  </ul></nav>
+</div></header>
+<main><div class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> &rsaquo; VAT calculator</p>
+<article>
+<h1>UAE VAT calculator (5%)</h1>
+<p>Add 5% VAT to a net amount, or remove VAT from a VAT-inclusive price. The standard UAE VAT rate has been 5% since 1 January 2018 (Federal Decree-Law No. 8 of 2017).</p>
+</article>
+<div class="tool">
+  <div class="row2">
+    <div class="field">
+      <label for="mode">I want to</label>
+      <select id="mode">
+        <option value="add">Add VAT to a net price</option>
+        <option value="remove">Remove VAT from a VAT-inclusive price</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="rate">VAT rate (%)</label>
+      <input id="rate" type="number" min="0" step="any" inputmode="decimal" value="5">
+      <p class="hint">Standard UAE rate is 5%. Change it only if you need a different rate.</p>
+    </div>
+  </div>
+  <div class="field">
+    <label for="amount" id="amount-label">Net amount (AED)</label>
+    <input id="amount" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 1000">
+  </div>
+  <div class="result" id="out" hidden>
+    <table>
+      <tr><td>Net amount (before VAT)</td><td id="r-net">-</td></tr>
+      <tr><td id="r-vat-label">VAT (5%)</td><td id="r-vat">-</td></tr>
+    </table>
+    <div class="big" id="r-gross" style="margin-top:8px">-</div>
+    <p class="hint" id="r-note" style="font-size:.85rem;color:var(--muted)"></p>
+  </div>
+  <p class="disclaimer">For general information only, based on the 5% standard rate published by the UAE Government Portal and the Federal Tax Authority. Some supplies are zero-rated or exempt - see the <a href="/guides/uae-vat-guide">VAT guide</a>. Not tax advice.</p>
+</div>
+<!-- AdSense slot - code to be added after approval -->
+<div class="ad-slot" aria-hidden="true"></div>
+<article>
+<h2>The two formulas</h2>
+<ul>
+  <li><strong>Add VAT:</strong> VAT = net &times; 0.05 &middot; total = net &times; 1.05</li>
+  <li><strong>Remove VAT:</strong> net = inclusive price &divide; 1.05 &middot; VAT = inclusive price &minus; net (4.7619% of the inclusive price)</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<details class="faq"><summary>What is the VAT rate in the UAE?</summary><p>5% since 1 January 2018. A limited set of goods and services is zero-rated (exports, international transport, certain education and healthcare) or exempt (bare land, local passenger transport, some financial services).</p></details>
+<details class="faq"><summary>How do I work out the VAT inside a receipt total?</summary><p>Divide the total by 1.05 to get the net price; the difference is the VAT. For AED 105, the net is AED 100 and the VAT is AED 5.</p></details>
+<details class="faq"><summary>When must a business register for VAT?</summary><p>Mandatory above AED 375,000 of taxable supplies and imports per year; voluntary above AED 187,500.</p></details>
+<details class="faq"><summary>Do tourists pay VAT?</summary><p>Yes, but they can reclaim it on eligible purchases at the airport when leaving, through the official tourist refund scheme.</p></details>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">
+  <div><h4>Tools</h4><ul>
+    <li><a href="/gratuity-calculator">Gratuity calculator</a></li>
+    <li><a href="/vat-calculator">VAT calculator</a></li>
+    <li><a href="/salary-calculator">Salary calculator</a></li>
+  </ul></div>
+  <div><h4>Guides</h4><ul>
+    <li><a href="/guides/how-gratuity-is-calculated">How gratuity works</a></li>
+    <li><a href="/guides/limited-vs-unlimited-contracts">Contract types</a></li>
+    <li><a href="/guides/uae-vat-guide">VAT guide</a></li>
+  </ul></div>
+  <div><h4>Site</h4><ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul></div>
+  <p class="legal">UAE Money Tools provides free calculators for general information only. It is not legal, tax or financial advice.</p>
+</div></footer>
+<script>
+(function(){
+  var mode=document.getElementById('mode'),rate=document.getElementById('rate'),
+      amount=document.getElementById('amount'),out=document.getElementById('out'),
+      label=document.getElementById('amount-label');
+  var fmt=function(n){return 'AED '+n.toLocaleString('en-AE',{maximumFractionDigits:2,minimumFractionDigits:2});};
+  function calc(){
+    var a=parseFloat(amount.value),r=parseFloat(rate.value);
+    if(!(a>=0)||!(r>=0)||amount.value===''){out.hidden=true;return;}
+    var net,vat,gross;
+    if(mode.value==='add'){net=a;vat=a*r/100;gross=a+vat;}
+    else{gross=a;net=a/(1+r/100);vat=gross-net;}
+    label.textContent=mode.value==='add'?'Net amount (AED)':'VAT-inclusive amount (AED)';
+    document.getElementById('r-net').textContent=fmt(net);
+    document.getElementById('r-vat-label').textContent='VAT ('+r+'%)';
+    document.getElementById('r-vat').textContent=fmt(vat);
+    document.getElementById('r-gross').textContent='Total incl. VAT: '+fmt(gross);
+    document.getElementById('r-note').textContent=mode.value==='add'
+      ? fmt(net)+' + '+fmt(vat)+' VAT = '+fmt(gross)
+      : fmt(gross)+' includes '+fmt(vat)+' VAT; the net price is '+fmt(net)+'.';
+    out.hidden=false;
+  }
+  [mode,rate,amount].forEach(function(el){el.addEventListener('input',calc);el.addEventListener('change',calc);});
+})();
+</script>
+</body>
+</html>

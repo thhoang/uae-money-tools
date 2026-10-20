@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UAE Gratuity Calculator 2026 - End of Service Pay (Article 51)</title>
+<meta name="description" content="Free UAE end-of-service gratuity calculator. Enter your basic salary and service dates to see your gratuity under Article 51 of the UAE Labour Law: 21 days per year (first 5 years), 30 days after, with the 2-year cap.">
+<link rel="canonical" href="https://uae-money-tools.pages.dev/gratuity-calculator">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UAE Gratuity Calculator - End of Service Pay">
+<meta property="og:description" content="Calculate your end-of-service gratuity under the current UAE Labour Law. Free, instant, private.">
+<meta property="og:url" content="https://uae-money-tools.pages.dev/gratuity-calculator">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"UAE Gratuity Calculator",
+ "url":"https://uae-money-tools.pages.dev/gratuity-calculator","applicationCategory":"FinanceApplication",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+ "description":"End-of-service gratuity calculator based on Article 51 of UAE Federal Decree-Law No. 33 of 2021."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is gratuity calculated in the UAE?","acceptedAnswer":{"@type":"Answer","text":"Under Article 51 of the UAE Labour Law, a full-time expatriate worker with at least one year of continuous service gets 21 days of basic salary for each of the first 5 years of service, and 30 days of basic salary for each year after that. Fractions of a year are paid pro rata, and the total cannot exceed two years' wages."}},
+{"@type":"Question","name":"Is gratuity calculated on basic salary or gross salary?","acceptedAnswer":{"@type":"Answer","text":"Gratuity is calculated on your last basic salary only. Allowances such as housing, transport and utilities are not included."}},
+{"@type":"Question","name":"Do I get gratuity if I resign?","acceptedAnswer":{"@type":"Answer","text":"Yes. Under the current law (Federal Decree-Law No. 33 of 2021), workers who complete at least one year of continuous service are entitled to the full gratuity whether they resign or their contract is terminated. The old reductions for resigning from an unlimited contract no longer apply."}},
+{"@type":"Question","name":"What if I worked less than one year?","acceptedAnswer":{"@type":"Answer","text":"No gratuity is due for less than one year of continuous service."}},
+{"@type":"Question","name":"Do unpaid leave days count toward my service?","acceptedAnswer":{"@type":"Answer","text":"No. Days of absence without pay are excluded from the service period used to calculate gratuity."}}
+]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="/"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff" opacity=".18"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">DH</text></svg>UAE Money Tools</a>
+  <nav class="main" aria-label="Main"><ul>
+    <li><a href="/gratuity-calculator" aria-current="page">Gratuity</a></li>
+    <li><a href="/vat-calculator">VAT</a></li>
+    <li><a href="/salary-calculator">Salary</a></li>
+    <li><a href="/guides/how-gratuity-is-calculated">Guides</a></li>
+  </ul></nav>
+</div></header>
+<main><div class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> &rsaquo; Gratuity calculator</p>
+<article>
+<h1>UAE gratuity calculator (end of service)</h1>
+<p>Enter your <strong>basic monthly salary</strong> and your service dates. The calculator applies Article 51 of the UAE Labour Law (Federal Decree-Law No. 33 of 2021): 21 days of basic pay for each of the first 5 years, 30 days for each year after, pro rata for part-years, capped at two years' wages.</p>
+</article>
+<div class="tool">
+  <div class="row2">
+    <div class="field">
+      <label for="basic">Basic monthly salary (AED)</label>
+      <input id="basic" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 5000">
+      <p class="hint">Basic pay only - exclude housing, transport and other allowances.</p>
+    </div>
+    <div class="field">
+      <label for="unpaid">Unpaid leave days (optional)</label>
+      <input id="unpaid" type="number" min="0" step="1" inputmode="numeric" placeholder="0">
+      <p class="hint">Days of absence without pay do not count toward service.</p>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="field">
+      <label for="start">First day of work</label>
+      <input id="start" type="date">
+    </div>
+    <div class="field">
+      <label for="end">Last day of work</label>
+      <input id="end" type="date">
+    </div>
+  </div>
+  <div class="result" id="out" hidden>
+    <div class="big" id="total">AED 0</div>
+    <table>
+      <tr><td>Eligible service</td><td id="r-years">-</td></tr>
+      <tr><td>Daily basic wage (annual basic &divide; 365)</td><td id="r-daily">-</td></tr>
+      <tr><td>First 5 years &times; 21 days</td><td id="r-p1">-</td></tr>
+      <tr><td>Years after 5 &times; 30 days</td><td id="r-p2">-</td></tr>
+      <tr><td>2-year wage cap</td><td id="r-cap">-</td></tr>
+    </table>
+  </div>
+  <p class="note" id="warn" hidden></p>
+  <p class="disclaimer">Estimate only, for full-time private-sector expatriate employees under Federal Decree-Law No. 33 of 2021 (Article 51) and Cabinet Resolution No. 1 of 2022. DIFC uses the DEWS savings scheme instead, and some free zones follow their own rules. Employers may deduct amounts you owe them. This is not legal advice - check <a href="https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/end-of-service-benefits-for-employees-in-the-private-sector" rel="noopener">u.ae</a> or MOHRE for your exact case.</p>
+</div>
+<!-- AdSense slot - code to be added after approval -->
+<div class="ad-slot" aria-hidden="true"></div>
+<article>
+<h2>How the maths works</h2>
+<p>Your daily basic wage is your annual basic salary divided by 365. The first five years of service earn 21 of those daily wages per year; every year after that earns 30. A part-year counts pro rata once you pass one full year. If the running total ever exceeds 24 months of basic pay, the law caps it there.</p>
+<h2>Frequently asked questions</h2>
+<details class="faq"><summary>How is gratuity calculated in the UAE?</summary><p>21 days of basic salary for each of the first 5 years of continuous service, 30 days for each year after, pro rata for part-years, capped at two years' total wages. See <a href="/guides/how-gratuity-is-calculated">the full guide with examples</a>.</p></details>
+<details class="faq"><summary>Is gratuity calculated on basic or gross salary?</summary><p>Basic salary only. Housing, transport, utilities and other allowances are excluded.</p></details>
+<details class="faq"><summary>Do I get gratuity if I resign?</summary><p>Yes, as long as you completed at least one year of continuous service. The current law gives the same gratuity whether you resign or are terminated - the old unlimited-contract resignation reductions were abolished in 2022.</p></details>
+<details class="faq"><summary>What about limited vs unlimited contracts?</summary><p>Since February 2022 all UAE contracts are fixed-term; unlimited contracts were phased out (conversion deadline end of 2023). The same gratuity formula now applies to everyone. Read <a href="/guides/limited-vs-unlimited-contracts">limited vs unlimited contracts</a>.</p></details>
+<details class="faq"><summary>Do unpaid leave days count?</summary><p>No. Article 51 excludes days of absence without pay from the service period.</p></details>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">
+  <div><h4>Tools</h4><ul>
+    <li><a href="/gratuity-calculator">Gratuity calculator</a></li>
+    <li><a href="/vat-calculator">VAT calculator</a></li>
+    <li><a href="/salary-calculator">Salary calculator</a></li>
+  </ul></div>
+  <div><h4>Guides</h4><ul>
+    <li><a href="/guides/how-gratuity-is-calculated">How gratuity works</a></li>
+    <li><a href="/guides/limited-vs-unlimited-contracts">Contract types</a></li>
+    <li><a href="/guides/uae-vat-guide">VAT guide</a></li>
+  </ul></div>
+  <div><h4>Site</h4><ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul></div>
+  <p class="legal">UAE Money Tools provides free calculators for general information only. It is not legal, tax or financial advice.</p>
+</div></footer>
+<script>
+(function(){
+  var basic=document.getElementById('basic'),unpaid=document.getElementById('unpaid'),
+      start=document.getElementById('start'),end=document.getElementById('end'),
+      out=document.getElementById('out'),warn=document.getElementById('warn');
+  var fmt=function(n){return 'AED '+n.toLocaleString('en-AE',{maximumFractionDigits:2,minimumFractionDigits:2});};
+  end.value=new Date().toISOString().slice(0,10);
+  function daysBetween(a,b){return Math.round((b-a)/86400000);}
+  function calc(){
+    var b=parseFloat(basic.value),s=new Date(start.value),e=new Date(end.value),
+        up=parseInt(unpaid.value,10)||0;
+    if(!(b>0)||isNaN(s)||isNaN(e)||e<=s){out.hidden=true;warn.hidden=true;return;}
+    var days=daysBetween(s,e)-up; if(days<0)days=0;
+    var years=days/365;
+    if(years<1){
+      out.hidden=true;warn.hidden=false;
+      warn.textContent='Less than 1 year of continuous service: no end-of-service gratuity is due under Article 51.';
+      return;
+    }
+    warn.hidden=true;
+    var daily=b*12/365;
+    var y1=Math.min(years,5), y2=Math.max(years-5,0);
+    var p1=y1*21*daily, p2=y2*30*daily;
+    var total=p1+p2, cap=b*24, capped=false;
+    if(total>cap){total=cap;capped=true;}
+    out.hidden=false;
+    document.getElementById('total').textContent=fmt(total);
+    var yy=Math.floor(years),mm=Math.round((years-yy)*12);
+    document.getElementById('r-years').textContent=yy+' year'+(yy===1?'':'s')+(mm?', '+mm+' month'+(mm===1?'':'s'):'')+(up?' ('+up+' unpaid days excluded)':'');
+    document.getElementById('r-daily').textContent=fmt(daily);
+    document.getElementById('r-p1').textContent=(y1*21).toFixed(1).replace(/\.0$/,'')+' days = '+fmt(p1);
+    document.getElementById('r-p2').textContent=y2>0?(y2*30).toFixed(1).replace(/\.0$/,'')+' days = '+fmt(p2):'-';
+    document.getElementById('r-cap').textContent=capped?'Applied ('+fmt(cap)+')':'Not reached ('+fmt(cap)+')';
+  }
+  [basic,unpaid,start,end].forEach(function(el){el.addEventListener('input',calc);el.addEventListener('change',calc);});
+})();
+</script>
+</body>
+</html>

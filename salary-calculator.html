@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UAE Salary Calculator - Take-Home Pay, Annual, Daily and Hourly</title>
+<meta name="description" content="Free UAE salary calculator. Convert monthly pay to annual, daily and hourly rates, see take-home pay (no income tax in the UAE, 5% GPSSA pension for Emiratis) and your basic-salary share for gratuity.">
+<link rel="canonical" href="https://uae-money-tools.pages.dev/salary-calculator">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UAE Salary Calculator - Take-Home Pay">
+<meta property="og:description" content="Monthly to annual, daily and hourly pay in the UAE, with take-home after deductions. Free, instant, private.">
+<meta property="og:url" content="https://uae-money-tools.pages.dev/salary-calculator">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"UAE Salary Calculator",
+ "url":"https://uae-money-tools.pages.dev/salary-calculator","applicationCategory":"FinanceApplication",
+ "operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+ "description":"Take-home pay and salary converter for the UAE."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is there income tax on salaries in the UAE?","acceptedAnswer":{"@type":"Answer","text":"No. The UAE does not levy personal income tax on salaries, so gross pay usually equals net pay for expatriates, minus any agreed deductions."}},
+{"@type":"Question","name":"What deductions apply to UAE nationals?","acceptedAnswer":{"@type":"Answer","text":"Emirati employees in the private sector contribute 5% of their pensionable salary to the GPSSA pension scheme; the employer contributes a further 12.5% (with government support)."}},
+{"@type":"Question","name":"How do I convert a monthly salary to an hourly rate in the UAE?","acceptedAnswer":{"@type":"Answer","text":"A common approach is monthly salary divided by 30 for a daily rate, then divided by your contractual working hours per day (usually 8) for an hourly rate."}},
+{"@type":"Question","name":"Why does my basic salary matter if my total pay is higher?","acceptedAnswer":{"@type":"Answer","text":"End-of-service gratuity and overtime are calculated on basic salary, not total pay, so knowing the basic share of your package matters."}}
+]}
+</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="/"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff" opacity=".18"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">DH</text></svg>UAE Money Tools</a>
+  <nav class="main" aria-label="Main"><ul>
+    <li><a href="/gratuity-calculator">Gratuity</a></li>
+    <li><a href="/vat-calculator">VAT</a></li>
+    <li><a href="/salary-calculator" aria-current="page">Salary</a></li>
+    <li><a href="/guides/how-gratuity-is-calculated">Guides</a></li>
+  </ul></nav>
+</div></header>
+<main><div class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> &rsaquo; Salary calculator</p>
+<article>
+<h1>UAE salary calculator</h1>
+<p>The UAE charges <strong>no personal income tax</strong>, so for most expatriates take-home pay is simply gross pay minus any agreed deductions (loans, salary advances, unpaid-leave deductions). Emirati employees contribute 5% of pensionable salary to the GPSSA pension scheme. Enter your package below to see take-home pay and conversions.</p>
+</article>
+<div class="tool">
+  <div class="row2">
+    <div class="field">
+      <label for="gross">Total monthly salary (AED)</label>
+      <input id="gross" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 8000">
+    </div>
+    <div class="field">
+      <label for="basicshare">Basic salary share (%)</label>
+      <input id="basicshare" type="number" min="0" max="100" step="any" inputmode="decimal" value="60">
+      <p class="hint">Commonly 60% of total pay, but check your contract. Gratuity uses basic pay only.</p>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="field">
+      <label for="national">Employee type</label>
+      <select id="national">
+        <option value="expat">Expatriate (no pension deduction)</option>
+        <option value="national">UAE national (5% GPSSA pension)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="deduct">Other monthly deductions (AED, optional)</label>
+      <input id="deduct" type="number" min="0" step="any" inputmode="decimal" placeholder="0">
+    </div>
+  </div>
+  <div class="result" id="out" hidden>
+    <div class="big" id="r-takehome">-</div>
+    <table>
+      <tr><td>Gross monthly</td><td id="r-gross">-</td></tr>
+      <tr><td id="r-pension-label">Pension contribution</td><td id="r-pension">-</td></tr>
+      <tr><td>Other deductions</td><td id="r-deduct">-</td></tr>
+      <tr><td>Annual gross</td><td id="r-annual">-</td></tr>
+      <tr><td>Daily rate (monthly &divide; 30)</td><td id="r-daily">-</td></tr>
+      <tr><td>Hourly rate (daily &divide; 8)</td><td id="r-hourly">-</td></tr>
+      <tr><td>Basic salary per month (for gratuity)</td><td id="r-basic">-</td></tr>
+    </table>
+  </div>
+  <p class="disclaimer">Estimates for general information. The UAE has no personal income tax; figures exclude any home-country tax obligations you may have. GPSSA rates per the General Pension and Social Security Authority (employee 5%, employer 12.5% in the private sector). Not financial advice.</p>
+</div>
+<!-- AdSense slot - code to be added after approval -->
+<div class="ad-slot" aria-hidden="true"></div>
+<article>
+<h2>What usually comes out of a UAE salary</h2>
+<ul>
+  <li><strong>Income tax:</strong> none - the UAE does not tax employment income.</li>
+  <li><strong>Pension:</strong> UAE and GCC nationals contribute 5% of pensionable salary to GPSSA; expatriates do not contribute to a UAE pension (they receive end-of-service gratuity instead - see the <a href="/gratuity-calculator">gratuity calculator</a>).</li>
+  <li><strong>Agreed deductions:</strong> loan repayments, advances, or deductions for unpaid absence. Employers may not charge workers visa or recruitment fees.</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<details class="faq"><summary>Is there income tax in the UAE?</summary><p>No. Salaries are not taxed, which is why gross and net pay are usually identical for expatriates before any agreed deductions.</p></details>
+<details class="faq"><summary>What is the 5% deduction for Emiratis?</summary><p>UAE nationals registered with GPSSA contribute 5% of their pensionable salary; their employer adds 12.5% (private sector), and the government contributes a further 2.5%.</p></details>
+<details class="faq"><summary>How do I get an hourly rate from my monthly salary?</summary><p>Monthly &divide; 30 gives a daily rate (the convention also used for gratuity and leave maths); divide by your contractual hours per day (usually 8) for an hourly rate.</p></details>
+<details class="faq"><summary>Why track my basic salary separately?</summary><p>Gratuity and overtime are calculated on basic pay, not total package. A higher basic share means a higher gratuity.</p></details>
+</article>
+</div></main>
+<footer class="site"><div class="wrap">
+  <div><h4>Tools</h4><ul>
+    <li><a href="/gratuity-calculator">Gratuity calculator</a></li>
+    <li><a href="/vat-calculator">VAT calculator</a></li>
+    <li><a href="/salary-calculator">Salary calculator</a></li>
+  </ul></div>
+  <div><h4>Guides</h4><ul>
+    <li><a href="/guides/how-gratuity-is-calculated">How gratuity works</a></li>
+    <li><a href="/guides/limited-vs-unlimited-contracts">Contract types</a></li>
+    <li><a href="/guides/uae-vat-guide">VAT guide</a></li>
+  </ul></div>
+  <div><h4>Site</h4><ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul></div>
+  <p class="legal">UAE Money Tools provides free calculators for general information only. It is not legal, tax or financial advice.</p>
+</div></footer>
+<script>
+(function(){
+  var gross=document.getElementById('gross'),share=document.getElementById('basicshare'),
+      nat=document.getElementById('national'),ded=document.getElementById('deduct'),
+      out=document.getElementById('out');
+  var fmt=function(n){return 'AED '+n.toLocaleString('en-AE',{maximumFractionDigits:2,minimumFractionDigits:2});};
+  function calc(){
+    var g=parseFloat(gross.value),s=parseFloat(share.value),d=parseFloat(ded.value)||0;
+    if(!(g>0)){out.hidden=true;return;}
+    if(!(s>=0&&s<=100))s=60;
+    var pension=nat.value==='national'?g*0.05:0;
+    var take=g-pension-d;
+    out.hidden=false;
+    document.getElementById('r-takehome').textContent='Take-home: '+fmt(take)+' / month';
+    document.getElementById('r-gross').textContent=fmt(g);
+    document.getElementById('r-pension-label').textContent=nat.value==='national'?'GPSSA pension (5%)':'Pension contribution';
+    document.getElementById('r-pension').textContent=nat.value==='national'?fmt(pension):'None (expatriate)';
+    document.getElementById('r-deduct').textContent=fmt(d);
+    document.getElementById('r-annual').textContent=fmt(g*12);
+    document.getElementById('r-daily').textContent=fmt(g/30);
+    document.getElementById('r-hourly').textContent=fmt(g/30/8);
+    document.getElementById('r-basic').textContent=fmt(g*s/100);
+  }
+  [gross,share,nat,ded].forEach(function(el){el.addEventListener('input',calc);el.addEventListener('change',calc);});
+})();
+</script>
+</body>
+</html>
