@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology - Formulas Used by UAE Money Tools</title>
+<meta name="description" content="The exact formulas behind every UAE Money Tools calculator: gratuity, leave pay, notice allowance, overtime, annual leave accrual and VAT, with assumptions stated.">
+<link rel="canonical" href="https://uae-money-tools.pages.dev/methodology">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="theme-color" content="#00732F">
+<meta property="og:site_name" content="UAE Money Tools">
+<meta property="og:locale" content="en_AE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Methodology - Formulas Used by UAE Money Tools">
+<meta name="twitter:description" content="The exact formulas behind every UAE Money Tools calculator: gratuity, leave pay, notice allowance, overtime, annual leave accrual and VAT, with assumptions stated.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Methodology - Formulas Used by UAE Money Tools">
+<meta property="og:description" content="The exact formulas behind every UAE Money Tools calculator: gratuity, leave pay, notice allowance, overtime, annual leave accrual and VAT, with assumptions stated.">
+<meta property="og:url" content="https://uae-money-tools.pages.dev/methodology">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://uae-money-tools.pages.dev/methodology#webpage","url":"https://uae-money-tools.pages.dev/methodology","name":"Methodology - Formulas Used by UAE Money Tools","description":"The exact formulas behind every UAE Money Tools calculator: gratuity, leave pay, notice allowance, overtime, annual leave accrual and VAT, with assumptions stated.","inLanguage":"en-AE","isPartOf":{"@id":"https://uae-money-tools.pages.dev/#website"},"publisher":{"@id":"https://uae-money-tools.pages.dev/#org"},"dateModified":"2026-10-21"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://uae-money-tools.pages.dev/"},{"@type":"ListItem","position":2,"name":"Methodology","item":"https://uae-money-tools.pages.dev/methodology"}]}</script>
+
+
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="/"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff" opacity=".18"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">DH</text></svg>UAE Money Tools</a>
+  <nav class="main" aria-label="Main"><ul>
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/guides/">Guides</a></li>
+    <li><a href="/gratuity/">Gratuity tables</a></li>
+    <li><a href="/methodology" aria-current="page">Methodology</a></li>
+  </ul></nav>
+</div></header>
+<main><div class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> &rsaquo; Methodology</p>
+<article>
+<h1>Methodology: formulas and assumptions</h1>
+<p>This page lists every formula used on the site so you can check it. The same code (<a href="/assets/calc.js">assets/calc.js</a>) powers the calculators and the pre-computed tables, and it is tested against hand-calculated examples. Where an official source does not fix a convention, the page says so and the calculator lets you choose.</p>
+</article>
+
+<!-- AD SLOT: top-of-content - intentionally empty. Ad code is added here only after ad-network approval. -->
+<div class="ad-slot" data-slot="top-of-content" aria-hidden="true"></div>
+<article>
+<h2>Gratuity (Article 51, Federal Decree-Law No. 33 of 2021)</h2>
+<ul>
+<li>Service years = (days from first to last day &minus; unpaid-leave days) &divide; 365.</li>
+<li>Less than 1 year: gratuity = 0.</li>
+<li>Daily wage = basic monthly salary &times; 12 &divide; 365.</li>
+<li>Gratuity = daily wage &times; (21 &times; min(years, 5) + 30 &times; max(years &minus; 5, 0)).</li>
+<li>Cap: gratuity cannot exceed 24 &times; basic monthly salary (two years' wages). The cap is reached at 5 + (730 &minus; 105) &divide; 30 = about 25.83 years of service, whatever the salary.</li>
+</ul>
+<p><strong>Assumption:</strong> the official sources say gratuity uses basic salary and a daily wage; the 365-day divisor is our convention. Part-years are pro rata. Part-time work models (full-time gratuity &times; contracted hours &divide; full-time hours) are not modelled in the calculator.</p>
+<h2>Unused annual leave</h2>
+<p>Pay = (basic monthly salary &divide; D) &times; unused days, where D is 30 or 30.42 (365 &divide; 12). The sources specify basic salary but not D, so both choices are offered.</p>
+<h2>Annual leave accrual</h2>
+<ul>
+<li>Under 6 months: no accrual shown (not stated in the pages we use).</li>
+<li>6 to 12 months: 2 days &times; completed months of service.</li>
+<li>1 year or more: 30 days &times; service days &divide; 365.</li>
+</ul>
+<h2>Notice allowance</h2>
+<p>Allowance = (monthly wage &divide; D) &times; max(required notice days &minus; days served, 0). Article 43 sets notice at 30 to 90 days with full wages during the period and an allowance for the unserved part; the per-day conversion is our simplification.</p>
+<h2>Overtime</h2>
+<p>Hourly rate = basic &divide; D &divide; normal hours per day. Daytime overtime = hours &times; hourly rate &times; 1.25. Overtime from 10 pm to 4 am and work on an off-day (if paid instead of a substitute rest day) = hours &times; hourly rate &times; 1.5. These multipliers come from the UAE Government Portal's working-hours page.</p>
+<h2>VAT</h2>
+<ul>
+<li>Add VAT: VAT = net &times; rate; gross = net + VAT.</li>
+<li>Remove VAT: net = gross &divide; (1 + rate); VAT = gross &minus; net.</li>
+<li>Invoice lines: net = quantity &times; unit price, rounded to the nearest fils; VAT = net &times; rate on standard lines, nil on zero-rated and exempt lines.</li>
+<li>Standard rate: 5% (Federal Tax Authority).</li>
+</ul>
+<h2>Rounding</h2>
+<p>Intermediate values are not rounded; results are displayed to two decimals (except per-line invoice VAT, which is rounded per line). Differences of a few fils against an employer's figure usually come from the daily-wage divisor or rounding.</p>
+<h2>Testing</h2>
+<p>The repository contains <code>TESTS.md</code> with hand-computed examples and a script that checks the code against them.</p>
+
+</article>
+<section class="related" aria-labelledby="rel-h">
+<h2 id="rel-h">Related tools and guides</h2>
+<ul>
+  <li><a href="/gratuity-calculator">Gratuity calculator</a></li>
+  <li><a href="/disclaimer">Disclaimer</a></li>
+</ul>
+</section>
+<!-- AD SLOT: bottom-of-content - intentionally empty. Ad code is added here only after ad-network approval. -->
+<div class="ad-slot" data-slot="bottom-of-content" aria-hidden="true"></div>
+<section class="sources" aria-labelledby="src-h">
+<h2 id="src-h">Sources and last checked</h2>
+<ul>
+  <li><a href="https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/end-of-service-benefits-for-employees-in-the-private-sector" rel="noopener">UAE Government Portal - End of service benefits in the private sector</a></li>
+  <li><a href="https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/Types-of-leaves" rel="noopener">UAE Government Portal - Types of leaves</a></li>
+  <li><a href="https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/terminating-employment-contracts" rel="noopener">UAE Government Portal - Terminating employment contracts and arbitrary dismissal</a></li>
+  <li><a href="https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/working-hours" rel="noopener">UAE Government Portal - Working hours and overtime</a></li>
+  <li><a href="https://tax.gov.ae/en/taxes/vat.aspx" rel="noopener">Federal Tax Authority - Value Added Tax</a></li>
+  <li><a href="https://mohre.gov.ae/assets/download/8cd7cf08/Federal%20Decree-Law%20No.%2033%20of%202021%20Regarding%20the%20Regulation%20of%20Employment%20Relationship%20and%20its%20amendments.pdf.aspx" rel="noopener">MOHRE - Federal Decree-Law No. 33 of 2021 (full text)</a></li>
+</ul>
+<p class="checked">Last checked against these sources: <time datetime="2026-10-21">21 October 2026</time>. Laws and fees change; confirm with the linked source before you rely on a figure.</p>
+</section>
+<p class="disclaimer">General information only, not legal, tax or financial advice. <a href="/disclaimer">Read the disclaimer</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">
+  <div><h4>Calculators</h4><ul>
+    <li><a href="/gratuity-calculator">Gratuity calculator</a></li>
+    <li><a href="/end-of-service-calculator">Final settlement calculator</a></li>
+    <li><a href="/leave-encashment-calculator">Leave encashment calculator</a></li>
+    <li><a href="/notice-period-pay-calculator">Notice period pay calculator</a></li>
+    <li><a href="/overtime-pay-calculator">Overtime pay calculator</a></li>
+    <li><a href="/annual-leave-calculator">Annual leave days calculator</a></li>
+    <li><a href="/vat-calculator">VAT calculator</a></li>
+    <li><a href="/vat-invoice-calculator">VAT invoice calculator</a></li>
+    <li><a href="/salary-calculator">Salary calculator</a></li>
+    <li><a href="/monthly-budget-calculator">Monthly budget calculator</a></li>
+  </ul></div>
+  <div><h4>Guides</h4><ul>
+    <li><a href="/guides/how-gratuity-is-calculated">How gratuity is calculated in the UAE</a></li>
+    <li><a href="/guides/gratuity-examples">Gratuity examples at different salaries and years</a></li>
+    <li><a href="/guides/unpaid-leave-and-gratuity">Unpaid leave and gratuity</a></li>
+    <li><a href="/guides/resignation-vs-termination">Resignation vs termination</a></li>
+    <li><a href="/guides/final-settlement-checklist">Final settlement checklist</a></li>
+    <li><a href="/guides/probation-rules">Probation rules in the UAE</a></li>
+    <li><a href="/guides/ramadan-working-hours">Working hours in Ramadan</a></li>
+    <li><a href="/guides/limited-vs-unlimited-contracts">Limited vs unlimited contracts</a></li>
+    <li><a href="/guides/">All guides</a></li>
+  </ul></div>
+  <div><h4>Site</h4><ul>
+    <li><a href="/gratuity/">Gratuity tables</a></li>
+    <li><a href="/methodology">Methodology</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/disclaimer">Disclaimer</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul></div>
+  <p class="legal">UAE Money Tools provides free calculators for general information only. It is not legal, tax or financial advice. Figures are estimates based on rules published by official UAE government sources. See the <a href="/disclaimer">disclaimer</a>.</p>
+</div></footer>
+
+</body>
+</html>
