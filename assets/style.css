@@ -74,3 +74,25 @@ footer.site a:hover{color:#fff}
 footer .legal{width:100%;border-top:1px solid #26313c;margin-top:8px;padding-top:14px;font-size:.8rem;color:#77828d}
 .breadcrumb{font-size:.85rem;color:var(--muted);margin:14px 0 0}
 .breadcrumb a{color:var(--muted)}
+/* --- additions: tables, tool lines, sources, related, card lists --- */
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0}
+.tablewrap table{min-width:520px;margin:0}
+article table td,article th{font-variant-numeric:tabular-nums}
+.btn{background:var(--green);color:#fff;border:0;border-radius:9px;padding:10px 16px;font-size:1rem;cursor:pointer}
+.btn:hover{background:var(--green-dark)}
+table.lines{width:100%;border-collapse:collapse;min-width:640px}
+table.lines th{text-align:left;font-size:.82rem;padding:4px}
+table.lines td{padding:3px;vertical-align:middle}
+table.lines input,table.lines select{width:100%;padding:8px;border:1.5px solid var(--line);border-radius:8px;font-size:.95rem;background:#fff}
+table.lines .rm{border:0;background:none;font-size:1.4rem;color:var(--accent);cursor:pointer;padding:0 8px}
+table.lines .lt{white-space:nowrap;font-weight:600}
+.sources,.related{border-top:1px solid var(--line);margin-top:26px;padding-top:6px}
+.sources h2,.related h2{font-size:1.05rem;margin:14px 0 6px}
+.sources ul,.related ul{padding-left:20px}
+.sources li,.related li{margin-bottom:4px;font-size:.93rem}
+.sources .checked{font-size:.85rem;color:var(--muted)}
+ul.cardlist{list-style:none;padding:0}
+ul.cardlist li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin-bottom:10px;max-width:none}
+ul.cardlist span{color:var(--muted);font-size:.93rem}
+.grid .card h3{font-size:1.05rem}
+a:focus-visible,button:focus-visible{outline:3px solid #f2b800;outline-offset:2px}

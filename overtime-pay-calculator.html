@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UAE Overtime Pay Calculator - 25% and 50% Rates Explained</title>
+<meta name="description" content="Free UAE overtime calculator using the official rates: normal hourly pay plus 25%, plus 50% for 10pm to 4am and for off-day work.">
+<link rel="canonical" href="https://uae-money-tools.pages.dev/overtime-pay-calculator">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="theme-color" content="#00732F">
+<meta property="og:site_name" content="UAE Money Tools">
+<meta property="og:locale" content="en_AE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UAE Overtime Pay Calculator - 25% and 50% Rates Explained">
+<meta name="twitter:description" content="Free UAE overtime calculator using the official rates: normal hourly pay plus 25%, plus 50% for 10pm to 4am and for off-day work.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UAE Overtime Pay Calculator - 25% and 50% Rates Explained">
+<meta property="og:description" content="Free UAE overtime calculator using the official rates: normal hourly pay plus 25%, plus 50% for 10pm to 4am and for off-day work.">
+<meta property="og:url" content="https://uae-money-tools.pages.dev/overtime-pay-calculator">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://uae-money-tools.pages.dev/overtime-pay-calculator#app","name":"UAE overtime pay calculator","url":"https://uae-money-tools.pages.dev/overtime-pay-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-AE","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},"description":"Free UAE overtime calculator using the official rates: normal hourly pay plus 25%, plus 50% for 10pm to 4am and for off-day work.","publisher":{"@id":"https://uae-money-tools.pages.dev/#org"},"dateModified":"2026-10-21"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://uae-money-tools.pages.dev/overtime-pay-calculator#webpage","url":"https://uae-money-tools.pages.dev/overtime-pay-calculator","name":"UAE Overtime Pay Calculator - 25% and 50% Rates Explained","description":"Free UAE overtime calculator using the official rates: normal hourly pay plus 25%, plus 50% for 10pm to 4am and for off-day work.","inLanguage":"en-AE","isPartOf":{"@id":"https://uae-money-tools.pages.dev/#website"},"publisher":{"@id":"https://uae-money-tools.pages.dev/#org"},"dateModified":"2026-10-21"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://uae-money-tools.pages.dev/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://uae-money-tools.pages.dev/#tools"},{"@type":"ListItem","position":3,"name":"Overtime pay calculator","item":"https://uae-money-tools.pages.dev/overtime-pay-calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much is overtime pay in the UAE?","acceptedAnswer":{"@type":"Answer","text":"The normal hourly rate based on basic salary plus 25%, or plus 50% for overtime between 10 pm and 4 am, according to the UAE Government Portal."}},{"@type":"Question","name":"Is overtime based on basic or total salary?","acceptedAnswer":{"@type":"Answer","text":"The UAE Government Portal says the hourly rate is based on basic salary."}},{"@type":"Question","name":"What is the maximum overtime per day?","acceptedAnswer":{"@type":"Answer","text":"Overtime cannot exceed 2 extra hours per day."}},{"@type":"Question","name":"Do shift workers get these overtime rates?","acceptedAnswer":{"@type":"Answer","text":"No. The UAE Government Portal says the overtime rates do not apply to shift workers."}}]}</script>
+
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="/"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff" opacity=".18"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">DH</text></svg>UAE Money Tools</a>
+  <nav class="main" aria-label="Main"><ul>
+    <li><a href="/#tools" aria-current="page">Calculators</a></li>
+    <li><a href="/guides/">Guides</a></li>
+    <li><a href="/gratuity/">Gratuity tables</a></li>
+    <li><a href="/methodology">Methodology</a></li>
+  </ul></nav>
+</div></header>
+<main><div class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/#tools">Calculators</a> &rsaquo; Overtime pay calculator</p>
+<article>
+<h1>UAE overtime pay calculator</h1>
+<p>Enter your basic salary and the extra hours you worked. Overtime is paid at your normal hourly rate (based on basic salary) <strong>plus 25%</strong>, rising to <strong>plus 50%</strong> for overtime between 10 pm and 4 am. Work on an off-day is paid at the normal rate plus 50% (or you get a substitute rest day instead).</p>
+</article>
+<div class="tool" data-tool="overtime">
+
+<div class="row2"><div class="field"><label for="basic">Basic monthly salary (AED)</label>
+<input id="basic" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 6000">
+</div><div class="field"><label for="divisor">Days per month for the hourly rate</label>
+<select id="divisor"><option value="30">30 days per month</option><option value="30.4167">30.42 days (365 &divide; 12)</option></select>
+<p class="hint">The official sources say pay is based on basic salary but do not fix the daily divisor, so you can choose. Check what your contract or MOHRE says for your case.</p></div></div>
+<div class="row2"><div class="field"><label for="hpd">Normal hours per day</label>
+<input id="hpd" type="number" min="0" step="any" inputmode="decimal" value="8">
+<p class="hint">Normal hours are 8 per day or 48 per week.</p></div><div class="field"><label for="dayh">Overtime hours (outside 10pm-4am)</label>
+<input id="dayh" type="number" min="0" step="any" inputmode="decimal" value="0">
+</div></div>
+<div class="row2"><div class="field"><label for="nighth">Overtime hours between 10pm and 4am</label>
+<input id="nighth" type="number" min="0" step="any" inputmode="decimal" value="0">
+</div><div class="field"><label for="offh">Hours worked on an off-day</label>
+<input id="offh" type="number" min="0" step="any" inputmode="decimal" value="0">
+<p class="hint">Only if you take pay instead of a substitute rest day.</p></div></div>
+<div class="result" id="out" hidden>
+<div class="big" id="total">-</div>
+<table><tr><td>Normal hourly rate</td><td id="r-hourly">-</td></tr><tr><td>Daytime overtime (+25%)</td><td id="r-day">-</td></tr><tr><td>Night overtime (+50%)</td><td id="r-night">-</td></tr><tr><td>Off-day work (+50%)</td><td id="r-off">-</td></tr></table>
+</div>
+<p class="note" id="warn" hidden></p>
+<p class="disclaimer">Estimate only. Shift workers are excluded from these overtime rates, and overtime is capped at 2 extra hours a day. Your contract and MOHRE rules apply.</p>
+</div>
+<!-- AD SLOT: top-of-content - intentionally empty. Ad code is added here only after ad-network approval. -->
+<div class="ad-slot" data-slot="top-of-content" aria-hidden="true"></div>
+<article>
+<h2>How the calculation works</h2>
+<p>Hourly rate = basic monthly salary &divide; days per month &divide; normal hours per day. Overtime pay = hourly rate &times; 1.25 for ordinary overtime, &times; 1.5 for 10 pm to 4 am overtime or off-day work.</p>
+<p><strong>Worked example.</strong> Basic AED 6,000, 30 days, 8 hours: hourly rate = 6,000 &divide; 30 &divide; 8 = <strong>AED 25.00</strong>. Four daytime overtime hours = 4 &times; 25 &times; 1.25 = AED 125. Two night hours = 2 &times; 25 &times; 1.5 = AED 75. One off-day hour = 1 &times; 25 &times; 1.5 = AED 37.50. Total: <strong>AED 237.50</strong>.</p>
+<h2>What the UAE Government Portal says</h2>
+<ul>
+<li>Normal working hours are 8 per day or 48 per week (Article 17).</li>
+<li>Overtime cannot exceed 2 extra hours per day.</li>
+<li>Overtime is paid at the normal hourly rate based on basic salary plus at least 25%, or plus 50% between 10 pm and 4 am. These rates do not apply to shift workers.</li>
+<li>Work on an off-day earns either a substitute rest day or pay at the normal rate plus 50%.</li>
+<li>In Ramadan, normal hours are reduced by 2 hours a day; see <a href="/guides/ramadan-working-hours">working hours in Ramadan</a>.</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<details class="faq"><summary>How much is overtime pay in the UAE?</summary><p>The normal hourly rate based on basic salary plus 25%, or plus 50% for overtime between 10 pm and 4 am, according to the UAE Government Portal.</p></details>
+<details class="faq"><summary>Is overtime based on basic or total salary?</summary><p>The UAE Government Portal says the hourly rate is based on basic salary.</p></details>
+<details class="faq"><summary>What is the maximum overtime per day?</summary><p>Overtime cannot exceed 2 extra hours per day.</p></details>
+<details class="faq"><summary>Do shift workers get these overtime rates?</summary><p>No. The UAE Government Portal says the overtime rates do not apply to shift workers.</p></details>
+</article>
+<section class="related" aria-labelledby="rel-h">
+<h2 id="rel-h">Related tools and guides</h2>
+<ul>
+  <li><a href="/guides/ramadan-working-hours">Working hours in Ramadan</a></li>
+  <li><a href="/salary-calculator">Salary calculator</a></li>
+  <li><a href="/end-of-service-calculator">Final settlement calculator</a></li>
+</ul>
+</section>
+<!-- AD SLOT: bottom-of-content - intentionally empty. Ad code is added here only after ad-network approval. -->
+<div class="ad-slot" data-slot="bottom-of-content" aria-hidden="true"></div>
+<section class="sources" aria-labelledby="src-h">
+<h2 id="src-h">Sources and last checked</h2>
+<ul>
+  <li><a href="https://u.ae/en/information-and-services/jobs/Sector-of-employment/employment-in-the-private-sector/working-hours" rel="noopener">UAE Government Portal - Working hours and overtime</a></li>
+  <li><a href="https://mohre.gov.ae/assets/download/8cd7cf08/Federal%20Decree-Law%20No.%2033%20of%202021%20Regarding%20the%20Regulation%20of%20Employment%20Relationship%20and%20its%20amendments.pdf.aspx" rel="noopener">MOHRE - Federal Decree-Law No. 33 of 2021 (full text)</a></li>
+</ul>
+<p class="checked">Last checked against these sources: <time datetime="2026-10-21">21 October 2026</time>. Laws and fees change; confirm with the linked source before you rely on a figure.</p>
+</section>
+<p class="disclaimer">General information only, not legal, tax or financial advice. <a href="/disclaimer">Read the disclaimer</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">
+  <div><h4>Calculators</h4><ul>
+    <li><a href="/gratuity-calculator">Gratuity calculator</a></li>
+    <li><a href="/end-of-service-calculator">Final settlement calculator</a></li>
+    <li><a href="/leave-encashment-calculator">Leave encashment calculator</a></li>
+    <li><a href="/notice-period-pay-calculator">Notice period pay calculator</a></li>
+    <li><a href="/overtime-pay-calculator">Overtime pay calculator</a></li>
+    <li><a href="/annual-leave-calculator">Annual leave days calculator</a></li>
+    <li><a href="/vat-calculator">VAT calculator</a></li>
+    <li><a href="/vat-invoice-calculator">VAT invoice calculator</a></li>
+    <li><a href="/salary-calculator">Salary calculator</a></li>
+    <li><a href="/monthly-budget-calculator">Monthly budget calculator</a></li>
+  </ul></div>
+  <div><h4>Guides</h4><ul>
+    <li><a href="/guides/how-gratuity-is-calculated">How gratuity is calculated in the UAE</a></li>
+    <li><a href="/guides/gratuity-examples">Gratuity examples at different salaries and years</a></li>
+    <li><a href="/guides/unpaid-leave-and-gratuity">Unpaid leave and gratuity</a></li>
+    <li><a href="/guides/resignation-vs-termination">Resignation vs termination</a></li>
+    <li><a href="/guides/final-settlement-checklist">Final settlement checklist</a></li>
+    <li><a href="/guides/probation-rules">Probation rules in the UAE</a></li>
+    <li><a href="/guides/ramadan-working-hours">Working hours in Ramadan</a></li>
+    <li><a href="/guides/limited-vs-unlimited-contracts">Limited vs unlimited contracts</a></li>
+    <li><a href="/guides/">All guides</a></li>
+  </ul></div>
+  <div><h4>Site</h4><ul>
+    <li><a href="/gratuity/">Gratuity tables</a></li>
+    <li><a href="/methodology">Methodology</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/disclaimer">Disclaimer</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul></div>
+  <p class="legal">UAE Money Tools provides free calculators for general information only. It is not legal, tax or financial advice. Figures are estimates based on rules published by official UAE government sources. See the <a href="/disclaimer">disclaimer</a>.</p>
+</div></footer>
+<script src="/assets/calc.js" defer></script>
+<script src="/assets/tools.js" defer></script>
+</body>
+</html>
