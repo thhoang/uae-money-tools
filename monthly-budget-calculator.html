@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UAE Monthly Budget Calculator - Simple Cost of Living Planner</title>
+<meta name="description" content="Free monthly budget calculator for the UAE. Enter your income and costs for rent, utilities, school, transport and more to see what is left to save.">
+<link rel="canonical" href="https://uae-money-tools.pages.dev/monthly-budget-calculator">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="theme-color" content="#00732F">
+<meta property="og:site_name" content="UAE Money Tools">
+<meta property="og:locale" content="en_AE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UAE Monthly Budget Calculator - Simple Cost of Living Planner">
+<meta name="twitter:description" content="Free monthly budget calculator for the UAE. Enter your income and costs for rent, utilities, school, transport and more to see what is left to save.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UAE Monthly Budget Calculator - Simple Cost of Living Planner">
+<meta property="og:description" content="Free monthly budget calculator for the UAE. Enter your income and costs for rent, utilities, school, transport and more to see what is left to save.">
+<meta property="og:url" content="https://uae-money-tools.pages.dev/monthly-budget-calculator">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://uae-money-tools.pages.dev/monthly-budget-calculator#app","name":"UAE monthly budget (cost of living) calculator","url":"https://uae-money-tools.pages.dev/monthly-budget-calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en-AE","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"AED"},"description":"Free monthly budget calculator for the UAE. Enter your income and costs for rent, utilities, school, transport and more to see what is left to save.","publisher":{"@id":"https://uae-money-tools.pages.dev/#org"},"dateModified":"2026-10-21"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://uae-money-tools.pages.dev/monthly-budget-calculator#webpage","url":"https://uae-money-tools.pages.dev/monthly-budget-calculator","name":"UAE Monthly Budget Calculator - Simple Cost of Living Planner","description":"Free monthly budget calculator for the UAE. Enter your income and costs for rent, utilities, school, transport and more to see what is left to save.","inLanguage":"en-AE","isPartOf":{"@id":"https://uae-money-tools.pages.dev/#website"},"publisher":{"@id":"https://uae-money-tools.pages.dev/#org"},"dateModified":"2026-10-21"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://uae-money-tools.pages.dev/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://uae-money-tools.pages.dev/#tools"},{"@type":"ListItem","position":3,"name":"Monthly budget calculator","item":"https://uae-money-tools.pages.dev/monthly-budget-calculator"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is there income tax in the UAE?","acceptedAnswer":{"@type":"Answer","text":"This tool does not model taxes. It takes your take-home income as an input; our salary calculator helps you estimate take-home pay."}},{"@type":"Question","name":"Does this site store my budget?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser and nothing is saved or sent."}}]}</script>
+
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="logo" href="/"><svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#fff" opacity=".18"/><text x="32" y="42" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">DH</text></svg>UAE Money Tools</a>
+  <nav class="main" aria-label="Main"><ul>
+    <li><a href="/#tools" aria-current="page">Calculators</a></li>
+    <li><a href="/guides/">Guides</a></li>
+    <li><a href="/gratuity/">Gratuity tables</a></li>
+    <li><a href="/methodology">Methodology</a></li>
+  </ul></nav>
+</div></header>
+<main><div class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/#tools">Calculators</a> &rsaquo; Monthly budget calculator</p>
+<article>
+<h1>UAE monthly budget (cost of living) calculator</h1>
+<p>Fill in your own take-home income and your own monthly costs. We deliberately do not pre-fill "average" prices: rent, school fees and bills vary too much between emirates and households for a single number to be useful. The tool shows what is left, your savings rate and each cost as a share of income.</p>
+</article>
+<div class="tool" data-tool="budget">
+
+<div class="field"><label for="income">Monthly take-home income (AED)</label>
+<input id="income" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 15000">
+<p class="hint">After deductions. Use the <a href="/salary-calculator">salary calculator</a> if you need a take-home figure.</p></div>
+<div class="row2"><div class="field"><label for="rent">Rent / mortgage (AED)</label>
+<input id="rent" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="utilities">Utilities (DEWA etc.) (AED)</label>
+<input id="utilities" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="groceries">Groceries (AED)</label>
+<input id="groceries" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="transport">Transport and fuel (AED)</label>
+<input id="transport" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="telecom">Phone and internet (AED)</label>
+<input id="telecom" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="school">School / childcare (AED)</label>
+<input id="school" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="insurance">Insurance (AED)</label>
+<input id="insurance" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="dining">Dining and leisure (AED)</label>
+<input id="dining" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="remit">Money sent home (AED)</label>
+<input id="remit" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div><div class="field"><label for="other">Other (AED)</label>
+<input id="other" type="number" min="0" step="any" inputmode="decimal" value="0" class="exp">
+</div></div>
+<div class="result" id="out" hidden>
+<div class="big" id="total">-</div>
+<table>
+<tr><td>Monthly income</td><td id="r-income">-</td></tr>
+<tr><td>Total spending</td><td id="r-spent">-</td></tr>
+<tr><td>Savings rate</td><td id="r-rate">-</td></tr>
+<tr><td>Left over for the year</td><td id="r-annual">-</td></tr>
+</table>
+<h3>Share of income</h3>
+<table><tr><td>Rent / mortgage</td><td id="s-rent">-</td></tr><tr><td>Utilities (DEWA etc.)</td><td id="s-utilities">-</td></tr><tr><td>Groceries</td><td id="s-groceries">-</td></tr><tr><td>Transport and fuel</td><td id="s-transport">-</td></tr><tr><td>Phone and internet</td><td id="s-telecom">-</td></tr><tr><td>School / childcare</td><td id="s-school">-</td></tr><tr><td>Insurance</td><td id="s-insurance">-</td></tr><tr><td>Dining and leisure</td><td id="s-dining">-</td></tr><tr><td>Money sent home</td><td id="s-remit">-</td></tr><tr><td>Other</td><td id="s-other">-</td></tr></table>
+</div>
+<p class="disclaimer">A planning aid only. No figures are sent anywhere; nothing is saved when you close the page.</p>
+</div>
+<!-- AD SLOT: top-of-content - intentionally empty. Ad code is added here only after ad-network approval. -->
+<div class="ad-slot" data-slot="top-of-content" aria-hidden="true"></div>
+<article>
+<h2>How to use it</h2>
+<p>Savings rate = (income &minus; spending) &divide; income. Example: income AED 15,000 and costs of AED 9,000 leave AED 6,000, a 40% savings rate and AED 72,000 over a year.</p>
+<h2>Tips for a realistic budget</h2>
+<ul>
+<li>Use last month's bank statement rather than memory.</li>
+<li>List yearly costs (insurance, school re-enrolment, visa renewals) divided by 12.</li>
+<li>Keep "money sent home" on its own line so it is visible.</li>
+<li>If you are leaving a job, plan around your <a href="/end-of-service-calculator">final settlement</a> arriving later than your last salary.</li>
+</ul>
+<h2>Frequently asked questions</h2>
+<details class="faq"><summary>Is there income tax in the UAE?</summary><p>This tool does not model taxes. It takes your take-home income as an input; our <a href="/salary-calculator">salary calculator</a> helps you estimate take-home pay.</p></details>
+<details class="faq"><summary>Does this site store my budget?</summary><p>No. Everything runs in your browser and nothing is saved or sent.</p></details>
+</article>
+<section class="related" aria-labelledby="rel-h">
+<h2 id="rel-h">Related tools and guides</h2>
+<ul>
+  <li><a href="/salary-calculator">Salary calculator</a></li>
+  <li><a href="/end-of-service-calculator">Final settlement calculator</a></li>
+  <li><a href="/overtime-pay-calculator">Overtime pay calculator</a></li>
+</ul>
+</section>
+<!-- AD SLOT: bottom-of-content - intentionally empty. Ad code is added here only after ad-network approval. -->
+<div class="ad-slot" data-slot="bottom-of-content" aria-hidden="true"></div>
+<section class="sources" aria-labelledby="src-h">
+<h2 id="src-h">Sources and last checked</h2>
+
+<p class="checked">Last checked against these sources: <time datetime="2026-10-21">21 October 2026</time>. Laws and fees change; confirm with the linked source before you rely on a figure. This tool contains no legal or tax rules: it only adds up the figures you enter.</p>
+</section>
+<p class="disclaimer">General information only, not legal, tax or financial advice. <a href="/disclaimer">Read the disclaimer</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">
+  <div><h4>Calculators</h4><ul>
+    <li><a href="/gratuity-calculator">Gratuity calculator</a></li>
+    <li><a href="/end-of-service-calculator">Final settlement calculator</a></li>
+    <li><a href="/leave-encashment-calculator">Leave encashment calculator</a></li>
+    <li><a href="/notice-period-pay-calculator">Notice period pay calculator</a></li>
+    <li><a href="/overtime-pay-calculator">Overtime pay calculator</a></li>
+    <li><a href="/annual-leave-calculator">Annual leave days calculator</a></li>
+    <li><a href="/vat-calculator">VAT calculator</a></li>
+    <li><a href="/vat-invoice-calculator">VAT invoice calculator</a></li>
+    <li><a href="/salary-calculator">Salary calculator</a></li>
+    <li><a href="/monthly-budget-calculator">Monthly budget calculator</a></li>
+  </ul></div>
+  <div><h4>Guides</h4><ul>
+    <li><a href="/guides/how-gratuity-is-calculated">How gratuity is calculated in the UAE</a></li>
+    <li><a href="/guides/gratuity-examples">Gratuity examples at different salaries and years</a></li>
+    <li><a href="/guides/unpaid-leave-and-gratuity">Unpaid leave and gratuity</a></li>
+    <li><a href="/guides/resignation-vs-termination">Resignation vs termination</a></li>
+    <li><a href="/guides/final-settlement-checklist">Final settlement checklist</a></li>
+    <li><a href="/guides/probation-rules">Probation rules in the UAE</a></li>
+    <li><a href="/guides/ramadan-working-hours">Working hours in Ramadan</a></li>
+    <li><a href="/guides/limited-vs-unlimited-contracts">Limited vs unlimited contracts</a></li>
+    <li><a href="/guides/">All guides</a></li>
+  </ul></div>
+  <div><h4>Site</h4><ul>
+    <li><a href="/gratuity/">Gratuity tables</a></li>
+    <li><a href="/methodology">Methodology</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+    <li><a href="/disclaimer">Disclaimer</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul></div>
+  <p class="legal">UAE Money Tools provides free calculators for general information only. It is not legal, tax or financial advice. Figures are estimates based on rules published by official UAE government sources. See the <a href="/disclaimer">disclaimer</a>.</p>
+</div></footer>
+<script src="/assets/calc.js" defer></script>
+<script src="/assets/tools.js" defer></script>
+</body>
+</html>
