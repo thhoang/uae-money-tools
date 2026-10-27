@@ -124,6 +124,7 @@ ${GUIDES.slice(0, 8).map(g => `    <li><a href="${g.path}">${esc(g.name)}</a></l
     <li><a href="/privacy">Privacy</a></li>
     <li><a href="/disclaimer">Disclaimer</a></li>
     <li><a href="/contact">Contact</a></li>
+    <li><a href="https://aibrandvisibility.online" target="_blank" rel="noopener">AI Brand Visibility</a></li>
   </ul></div>
   <p class="legal">UAE Money Tools provides free calculators for general information only. It is not legal, tax or financial advice. Figures are estimates based on rules published by official UAE government sources. See the <a href="/disclaimer">disclaimer</a>.</p>
 </div></footer>`;
